@@ -10,6 +10,15 @@ This is not a secure way, so we are going to make a simple API, where the user c
 
 Example: If the user makes a `GET` request `http://localhost:8080/wordle?q=CRANE` and if the `SECRET` was `CIGAR`, then the response should be `gyybb` (We are adopting this convention to give feedback as green for 1st letter, yellow for 2nd and so on...)
 
+
+## Screenshot
+![Screenshot-1](./Images/SS_1.png)
+![Screenshot-2](./Images/SS_2.png)
+
+
+## API Deployment Link
+API deployed on [Heroku](http://wordle-vedant.herokuapp.com/wordle?q=fruit)
+
 ### TODO
 * Install `node` and `npm`. Install `http` package using `npm`
 * You are given a boilerplate/template of a simple node js http server in the `Wordle+` folder
