@@ -11,7 +11,10 @@ function myFunction(req, res) {
 	
 	if (req.url.includes('wordle')){		//check for valid request
 		const GUESS = req.url.split('?q=')[1];
-		const word_id = req.url.split('?q=')[2];
+		let word_id = req.url.split('?q=')[2];
+		if(word_id ==undefined){
+			word_id = 1;
+		}
 		const SECRET = wordArr[parseInt(word_id)%LENGTH];
 		const feedback = compare(GUESS.toUpperCase(),SECRET.toUpperCase()); 
 		res.write(feedback);
