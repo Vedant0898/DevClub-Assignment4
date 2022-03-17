@@ -16,8 +16,9 @@ Example: If the user makes a `GET` request `http://localhost:8080/wordle?q=CRANE
 ![Screenshot-2](./Images/SS_2.png)
 
 
-## API Deployment Link
-API deployed on [Heroku](http://wordle-vedant.herokuapp.com/wordle?q=fruit)
+## Deployment Link
+* Site deployed on [Github](https://vedant0898.github.io/Wordle-Clone/)
+* API deployed on [Heroku](http://wordle-vedant.herokuapp.com/wordle?q=fruit)
 
 ### TODO
 * Install `node` and `npm`. Install `http` package using `npm`
