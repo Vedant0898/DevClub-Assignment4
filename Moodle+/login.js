@@ -5,20 +5,16 @@ let arr = login_text.split(/\n/);
 
 let question = arr[4]; // Get question from login_element
 let question_arr = question.split(' ');
-
+let numbers = question.match(/\d+/g);
 let answer;
 if (question.includes('add')){
-    val_1 = parseInt(question_arr[2]);
-    val_2 = parseInt(question_arr[4]);
-    answer = val_1+val_2
+    answer = parseInt(numbers[0])+parseInt( numbers[1]);
 } else if (question.includes('subtract')) {
-    val_1 = parseInt(question_arr[2]);
-    val_2 = parseInt(question_arr[4]);
-    answer = val_1-val_2
+    answer = parseInt(numbers[0])-parseInt( numbers[1]);
 } else if (question.includes('first')) {
-    answer = question_arr[4];
+    answer = numbers[0];
 } else {
-    answer = question_arr[6];
+    answer = numbers[1];
 }
 
 const captcha_input_element = document.querySelector("#valuepkg3"); // Select input element
