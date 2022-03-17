@@ -1,31 +1,38 @@
 const http = require("http");
+var fs = require("fs");
 
-const hostname = '127.0.0.1';
-const port = process.env.PORT || 8080;;
+const port = process.env.PORT || 8080;
 
-const SECRET = "CIGAR"; 
+const wordData = fs.readFileSync("wordList.txt");
+const wordArr = wordData.toString().split("\r\n")	//split by "\r\n" for windows and "\n" for linux(heroku)
+const LENGTH = wordArr.length
 
 function myFunction(req, res) {
 	
 	if (req.url.includes('wordle')){		//check for valid request
 		const GUESS = req.url.split('?q=')[1];
-		
-		const feedback = compare(GUESS.toUpperCase()); 
+		const word_id = req.url.split('?q=')[2];
+		const SECRET = wordArr[parseInt(word_id)%LENGTH];
+		const feedback = compare(GUESS.toUpperCase(),SECRET.toUpperCase()); 
 		res.write(feedback);
 		res.end();
 	}
-	
+	else{
+		const error_str = 'Wrong URL'
+		res.write(error_str);
+		res.end();
+	}
+
 }
 
 const server = http.createServer(myFunction)
 
 function callback(){
-	console.log(`Server running at http://${hostname}:${port}/`);
+	console.log('Server running');
 }
 
-function compare(guess){		//returns feedback string
+function compare(guess,SECRET){		//returns feedback string
 	secret_arr = SECRET.split('');
-	console.log(guess);
 	guess_arr = guess.split('');
 
 	feedback_arr = []
