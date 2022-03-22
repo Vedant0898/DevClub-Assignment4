@@ -1,0 +1,150 @@
+html,body{
+    background-color: aliceblue;
+    margin:0;
+}
+
+
+#navbar{
+    /* border: 2px solid #5c97cc; */
+    margin: 0 auto 10px auto;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    background-color: #F8F890;
+}
+#title{
+    margin: 0 4vw 0;
+    font-size: 3rem;
+    font-weight: bold;
+    float:left;
+    height:auto;
+    width:auto;
+}
+#navbar-buttons{
+    display: flex;
+    font-size: 1.5rem;
+    float:right;
+    margin: auto 1vw 0 auto;
+    height: auto;
+    width:40vw;
+    justify-content: space-between;
+    
+    /* margin-left: auto; */
+}
+.nav-buttons{
+    font-weight: bold;
+    color: #150578;
+}
+.Chart-div{
+    padding: 10px;
+    margin: 1vw;
+    background-color: #B5E0F3;
+    border:3px solid #150578;
+    border-radius: 20px;
+    height: 50vw;
+    width: 45vw;
+    display: flex;
+    float: left;
+    justify-content: space-around;
+}
+.Chart{
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+#CustomChart{
+    padding: 10px;
+    margin: 20px auto 20px auto;
+    /* margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; */
+    border:3px solid #2B8700;
+    border-radius: 15px;
+    height: 90vh;
+    width: 95vw;
+    background-color: #D3F0C5;
+    display: flex;
+    
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#Controller{
+    border:3px solid #150578;
+    border-radius: 7px;
+    display: flex;
+    height:10vh;
+    flex:100%;
+    align-items: center;
+    justify-content: space-around;
+}
+#BarChart-div{
+    border:3px solid #150578;
+    border-radius: 10px;
+    height: 75vh;
+    flex:100%;
+}
+#BarChart{
+    flex:100%;
+    /* height:100%;
+    width:100%; */
+}
+#TypeofData{
+    padding: 1px;
+    /* margin-left: 15px;
+    flex-basis:auto; */
+    align-items: center;
+}
+#status{
+    font-size: 1.15rem;
+    background-color: rgb(221, 237, 252);
+    color: #150578;
+}
+#CountrySelector{
+    padding: 1px;
+    /* margin-left: 15vw;
+    flex-basis:auto; */
+    align-items: center;
+}
+#DateSelector{
+    padding: 1px;
+    /* margin-left: 15vw;
+    flex-basis:auto; */
+    align-items: center;
+    font-size: 1.15rem;
+    color: #150578;
+}
+#fromdate{
+    font-size: 1.10rem;
+    background-color: rgb(221, 237, 252);
+    color: #150578;
+}
+#submit{
+    /* margin-left: 15vw; */
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: #B5E0F3;
+    color: #150578;
+    border-radius: 5px;
+}
+#countryname{
+    width : 200px;
+    font-size: 1.15rem;
+    text-align: center;
+    background-color: rgb(221, 237, 252);
+    color: #150578;
+}
+
+#footer{
+    margin: 10px auto 0 auto;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F890;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

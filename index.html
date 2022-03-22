@@ -4,8 +4,62 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Covid Charts</title>
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
+	<div id="navbar">
+		<div id="title">COVID-19 STATS</div>
+		<div id="navbar-buttons">
+			<a href="#New_Cases" class="nav-buttons">New Cases</a>
+			<a href="#Total_Cases" class="nav-buttons">Total Cases</a>
+			<a href="#Daily_Cases_Graph" class="nav-buttons">Daily Cases Graph</a>
+		</div>
+	</div>
+	
+	<div id="Chart-1div" class="Chart-div">
+		<a name="New_Cases"></a>
+		<canvas id="Chart-1" class="Chart"></canvas>
+	</div>
+	<div id="Chart-2div" class="Chart-div">
+		<canvas id="Chart-2" class="Chart"></canvas>
+	</div>
+	
+	<div id="Chart-3div" class="Chart-div">
+		<a name="Total_Cases"></a>
+		<canvas id="Chart-3" class="Chart"></canvas>
+	</div>
+	<div id="Chart-4div" class="Chart-div">
+		<canvas id="Chart-4" class="Chart"></canvas>
+	</div>
+	
+	<div id="CustomChart">
+		<a name="Daily_Cases_Graph"></a>
+		<div id="Controller">
+			<div id="TypeofData">
+				<select id="status">
+					<option value="confirmed">Confirmed Cases</option>
+					<option value="deaths">Death</option>
+				</select>
+			</div>
+			<div id="CountrySelector">
+				<select id="countryname">
+					<option value="india">India</option>
+				</select>
+			</div>
+			<div id="DateSelector">
+				<label for="fromdate">Select Start Date: </label>
+				<input type="date" id="fromdate">
+			</div>
+			<button id="submit" onclick="newBarChart()">SUBMIT</button>
+		</div>
+		<div id="BarChart-div">
+			<canvas id="BarChart"></canvas>
+		</div>
+	</div>
+	<div id="footer">
+		Made by Vedant Tamhane
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3/dist/chart.min.js"></script>
 	<script src="script.js"></script>
 </body>
